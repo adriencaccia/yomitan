@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 jobs:
   benchmark:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
@@ -26,7 +26,6 @@ jobs:
         run: npm run build:libs
 
       - name: Run Benchmarks
-        uses: CodSpeedHQ/action@v2
+        uses: CodSpeedHQ/action@v3
         with:
-          token: ${{ secrets.CODSPEED_TOKEN }}
           run: npm run bench
