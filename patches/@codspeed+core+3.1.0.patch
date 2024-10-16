@@ -1,0 +1,59 @@
+diff --git a/node_modules/@codspeed/core/dist/index.cjs.js b/node_modules/@codspeed/core/dist/index.cjs.js
+index 1c40cda..8c1d3fe 100644
+--- a/node_modules/@codspeed/core/dist/index.cjs.js
++++ b/node_modules/@codspeed/core/dist/index.cjs.js
+@@ -18861,6 +18861,11 @@ const optimizeFunction = async (fn) => {
+   }
+   await fn();
+   await fn();
++  await fn();
++  await fn();
++  await fn();
++  await fn();
++  await fn();
+   eval("%OptimizeFunctionOnNextCall(fn)");
+   await fn();
+ };
+diff --git a/node_modules/@codspeed/core/dist/index.es5.js b/node_modules/@codspeed/core/dist/index.es5.js
+index 2d45683..d1715d1 100644
+--- a/node_modules/@codspeed/core/dist/index.es5.js
++++ b/node_modules/@codspeed/core/dist/index.es5.js
+@@ -1,19 +1,19 @@
+-import require$$6, { writeFileSync } from 'fs';
+-import require$$1, { TextEncoder } from 'util';
+-import stream, { Readable } from 'stream';
+-import require$$1$1, { dirname } from 'path';
+-import require$$3 from 'http';
+-import require$$4 from 'https';
+-import require$$0$1 from 'url';
+ import require$$4$1 from 'assert';
+-import require$$1$2 from 'tty';
+-import require$$0$2 from 'os';
+-import zlib from 'zlib';
+ import EventEmitter from 'events';
++import require$$6, {writeFileSync} from 'fs';
++import require$$3 from 'http';
++import require$$4 from 'https';
++import fs$1 from 'node:fs';
+ import path$1 from 'node:path';
+-import { fileURLToPath } from 'node:url';
+ import process$1 from 'node:process';
+-import fs$1 from 'node:fs';
++import {fileURLToPath} from 'node:url';
++import require$$0$2 from 'os';
++import require$$1$1, {dirname} from 'path';
++import stream, {Readable} from 'stream';
++import require$$1$2 from 'tty';
++import require$$0$1 from 'url';
++import require$$1, {TextEncoder} from 'util';
++import zlib from 'zlib';
+ 
+ const CUSTOM_INTROSPECTION_EXIT_CODE = 0;
+ const getV8Flags = () => {
+@@ -19001,5 +19001,5 @@ const teardownCore = () => {
+ };
+ const Measurement = native_core$1.Measurement;
+ 
+-export { Measurement, getGitDir, getV8Flags, isBound, logDebug, mongoMeasurement, optimizeFunction, optimizeFunctionSync, setupCore, teardownCore, tryIntrospect };
++export {getGitDir, getV8Flags, isBound, logDebug, Measurement, mongoMeasurement, optimizeFunction, optimizeFunctionSync, setupCore, teardownCore, tryIntrospect};
+ //# sourceMappingURL=index.es5.js.map

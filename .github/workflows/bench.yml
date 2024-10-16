@@ -29,3 +29,5 @@ jobs:
         uses: CodSpeedHQ/action@v3
         with:
           run: npm run bench
+        env:
+          CODSPEED_FORCE_OPTIMIZATION: true
