@@ -35,7 +35,8 @@
         "test:build": "node ./dev/bin/build.js --dryRun --all",
         "license-report:html": "license-report --output=html --only=prod --fields=name --fields=installedVersion --fields=licenseType --fields=link --html.cssFile=dev/data/legal-npm.css > ext/legal-npm.html",
         "license-report:markdown": "license-report --output=markdown --only=prod --fields=name --fields=installedVersion --fields=licenseType --fields=link",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "postinstall": "patch-package"
     },
     "repository": {
         "type": "git",
@@ -96,6 +97,7 @@
         "jszip": "^3.10.1",
         "license-report": "^6.5.0",
         "lint-staged": "^15.2.5",
+        "patch-package": "^8.0.0",
         "prettier": "^3.2.5",
         "stylelint": "^16.2.1",
         "stylelint-config-recommended": "^14.0.0",
